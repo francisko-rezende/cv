@@ -71,21 +71,36 @@ Contact {#contact}
 
 
 
-Language Skills {#skills}
+Coding Skills {#coding_skills}
 --------------------------------------------------------------------------------
 
 ```{r}
-skills <- tribble(
+coding_skills <- tribble(
   ~skill,               ~level,
   "R",                  4,
+  "Latex",              2,
   "Python",             1,
   "Bash",               1
 )
 
-build_skill_bars(skills)
+build_skill_bars(coding_skills)
 ```
 
 
+Language Skills {#language_skills}
+--------------------------------------------------------------------------------
+
+```{r}
+language_skills <- tribble(
+  ~skill,               ~level,
+  "Portuguese",                  5,
+  "English",             4,
+  "Spanish",               2,
+  "Finnish",              2
+)
+
+build_skill_bars(language_skills)
+```
 
 
 
@@ -94,9 +109,9 @@ Disclaimer {#disclaimer}
 
 Made with the R package [**pagedown**](https://github.com/rstudio/pagedown).
 
-This CV's source code is available at [github.com/francisko-rezende/cv](https://github.com/francisko-rezende/cv).
+This CV's source code is available at [github.com/francisko-rezende/cv](https://github.com/francisko-rezende/cv), it was derived from  [github.com/nstrayer/cv](https://github.com/nstrayer/cv).
 
-I wrote it following [Nick Strayer's tutorial](https://livefreeordichotomize.com/2019/09/04/building_a_data_driven_cv_with_r/#want-to-build-your-cv-this-way), his source code is available at [github.com/nstrayer/cv](https://github.com/nstrayer/cv).
+I wrote it following [Nick Strayer's tutorial](https://livefreeordichotomize.com/2019/09/04/building_a_data_driven_cv_with_r/#want-to-build-your-cv-this-way).
 
 Last updated on `r Sys.Date()`.
 
@@ -106,7 +121,7 @@ Last updated on `r Sys.Date()`.
 Main
 ================================================================================
 
-Francisko de Moraes Rezende {#title}
+Francisko _de Moraes Rezende_ {#title}
 --------------------------------------------------------------------------------
 
 
@@ -130,45 +145,80 @@ print_section(position_data, 'education')
 Research Experience {data-icon=laptop}
 --------------------------------------------------------------------------------
 
+::: aside
+Being part of diverse research groups was a privilege. Cooperation is invaluable when it comes to scientific production. 
+:::
+
 ```{r}
 print_section(position_data, 'research_positions')
 ```
 
 
 
-<!-- Industry Experience {data-icon=suitcase} -->
-<!-- -------------------------------------------------------------------------------- -->
+Publications, Posters, and Talks {data-icon=book}
+--------------------------------------------------------------------------------
 
-<!-- ::: aside -->
-<!-- I have worked in a variety of roles ranging from journalist to software engineer to data scientist. I like collaborative environments where I can learn from my peers.  -->
-<!-- ::: -->
+::: aside
+The presenter's name is _italicized_ for posters and talks
+:::
 
-<!-- ```{r} -->
-<!-- print_section(position_data, 'industry_positions') -->
-<!-- ``` -->
+```{r}
+print_section(position_data, 'academic_articles')
+```
 
-<!-- <br> -->
-<!-- <br> -->
-<!-- <br> -->
+Coding {data-icon=terminal}
+--------------------------------------------------------------------------------
+
+```{r, results = 'asis'}
+position_data %>% print_section('coding')
+```
 
 Teaching Experience {data-icon=chalkboard-teacher}
 --------------------------------------------------------------------------------
 
 ::: aside
-I am passionate about education. I believe that no topic is too complex if the teacher is empathetic and willing to think about new methods of approaching task. 
+I love being involved in education. I believe that teaching brings a whole new level of understanding to who teaches and empowers the students. 
 :::
 
 ```{r}
 print_section(position_data, 'teaching_positions')
 ```
 
+Organizing comittee {data-icon=bezier-curve}
+--------------------------------------------------------------------------------
+::: aside
+“Mostra de Trabalhos de Ecologia Básica” events were mini symposia in which Basic Ecology students were supposed to present the results of the small research projects that they conducted during the semester
 
-Selected Data Science Writing {data-icon=chart-line}
+"I Simpósio de Ecologia e Evolução" was an ecology and evolution symposium
+:::
+
+```{r, results = 'asis'}
+position_data %>% print_section('organizing_committee')
+```
+
+Participation in scientific events {data-icon=calendar-check}
+--------------------------------------------------------------------------------
+
+```{r, results = 'asis'}
+position_data %>% print_section('event_participation')
+```
+
+
+Specialization courses {data-icon=chalkboard}
+--------------------------------------------------------------------------------
+
+```{r, results = 'asis'}
+position_data %>% print_section('specialization_courses')
+```
+
+
+
+Selected Writings {data-icon=chart-line}
 --------------------------------------------------------------------------------
 
 
 ::: aside
-I regularly blog about data science and visualization on my blog [LiveFreeOrDichotomize.](https://livefreeordichotomize.com/)
+I have [personal website](https://francisko-rezende.netlify.com/)  with a few posts where you can see some of my personal projects.
 :::
 
 <!-- ```{r} -->
@@ -192,16 +242,6 @@ I regularly blog about data science and visualization on my blog [LiveFreeOrDich
 <!-- ```{r} -->
 <!-- print_section(position_data, 'by_me_press') -->
 <!-- ``` -->
-
-
-
-
-Selected Publications, Posters, and Talks {data-icon=book}
---------------------------------------------------------------------------------
-
-```{r}
-print_section(position_data, 'academic_articles')
-```
 
 
 
