@@ -1,6 +1,6 @@
 ---
-title: "Nick Strayer's CV"
-author: Nick Strayer
+title: "Francisko's CV"
+author: Francisko de Moraes Rezende
 date: "`r Sys.Date()`"
 output:
   pagedown::html_resume:
@@ -48,7 +48,7 @@ Aside
 ================================================================================
 
 
-![logo](beta_dist.png){width=100%}
+<!-- ![logo](beta_dist.png){width=100%} -->
 
 ```{r}
 # When in export mode the little dots are unaligned, so fix that. 
@@ -63,11 +63,11 @@ Contact {#contact}
 --------------------------------------------------------------------------------
 
 
-- <i class="fa fa-envelope"></i> nick.strayer@gmail.com
-- <i class="fa fa-twitter"></i> NicholasStrayer
-- <i class="fa fa-github"></i> github.com/nstrayer
-- <i class="fa fa-link"></i> [nickstrayer.me](http://nickstrayer.me/)
-- <i class="fa fa-phone"></i> (734) 645-0110
+- <i class="fa fa-envelope"></i> francisko.rezende@gmail.com
+- <i class="fa fa-twitter"></i> francisko_r
+- <i class="fa fa-github"></i> github.com/francisko-rezende
+- <i class="fa fa-link"></i> [francisko-rezende.netlify.com](https://francisko-rezende.netlify.com/)
+<!-- - <i class="fa fa-phone"></i> +358 44 925 1325 -->
 
 
 
@@ -77,13 +77,9 @@ Language Skills {#skills}
 ```{r}
 skills <- tribble(
   ~skill,               ~level,
-  "R",                  5,
-  "Javascript (d3.js)", 4.5,
-  "Python",             4,
-  "Bash",               3.5,
-  "SQL",                3,
-  "C++",                3,
-  "AWK",                3
+  "R",                  4,
+  "Python",             1,
+  "Bash",               1
 )
 
 build_skill_bars(skills)
@@ -96,9 +92,11 @@ build_skill_bars(skills)
 Disclaimer {#disclaimer}
 --------------------------------------------------------------------------------
 
-Made with the R package [**pagedown**](https://github.com/rstudio/pagedown). 
+Made with the R package [**pagedown**](https://github.com/rstudio/pagedown).
 
-The source code is available at [github.com/nstrayer/cv](https://github.com/nstrayer/cv).
+This CV's source code is available at [github.com/francisko-rezende/cv](https://github.com/francisko-rezende/cv).
+
+I wrote it following [Nick Strayer's tutorial](https://livefreeordichotomize.com/2019/09/04/building_a_data_driven_cv_with_r/#want-to-build-your-cv-this-way), his source code is available at [github.com/nstrayer/cv](https://github.com/nstrayer/cv).
 
 Last updated on `r Sys.Date()`.
 
@@ -108,15 +106,12 @@ Last updated on `r Sys.Date()`.
 Main
 ================================================================================
 
-Nick Strayer {#title}
+Francisko de Moraes Rezende {#title}
 --------------------------------------------------------------------------------
 
 
 ```{r}
-intro_text <- "I have made [visualizations viewed by hundreds of thousands of people](https://www.nytimes.com/interactive/2016/08/26/us/college-student-migration.html), [sped up query times for 25 terabytes of data by an average of 4,800 times](https://livefreeordichotomize.com/2019/06/04/using_awk_and_r_to_parse_25tb/), and built [packages for R](https://github.com/nstrayer/shinysense) that let you [do magic](http://nickstrayer.me/dataDayTexas/).
-
-Currently searching for a data science position that allows me to build tools using visualization and machine learning to help people explore and understand their data. 
-"
+intro_text <- ""
 
 cat(sanitize_links(intro_text))
 ```
@@ -141,20 +136,20 @@ print_section(position_data, 'research_positions')
 
 
 
-Industry Experience {data-icon=suitcase}
---------------------------------------------------------------------------------
+<!-- Industry Experience {data-icon=suitcase} -->
+<!-- -------------------------------------------------------------------------------- -->
 
-::: aside
-I have worked in a variety of roles ranging from journalist to software engineer to data scientist. I like collaborative environments where I can learn from my peers. 
-:::
+<!-- ::: aside -->
+<!-- I have worked in a variety of roles ranging from journalist to software engineer to data scientist. I like collaborative environments where I can learn from my peers.  -->
+<!-- ::: -->
 
-```{r}
-print_section(position_data, 'industry_positions')
-```
+<!-- ```{r} -->
+<!-- print_section(position_data, 'industry_positions') -->
+<!-- ``` -->
 
-<br>
-<br>
-<br>
+<!-- <br> -->
+<!-- <br> -->
+<!-- <br> -->
 
 Teaching Experience {data-icon=chalkboard-teacher}
 --------------------------------------------------------------------------------
@@ -176,27 +171,27 @@ Selected Data Science Writing {data-icon=chart-line}
 I regularly blog about data science and visualization on my blog [LiveFreeOrDichotomize.](https://livefreeordichotomize.com/)
 :::
 
-```{r}
-print_section(position_data, 'data_science_writings')
-```
+<!-- ```{r} -->
+<!-- print_section(position_data, 'data_science_writings') -->
+<!-- ``` -->
 
 
 
-Selected Press (About)  {data-icon=newspaper}
---------------------------------------------------------------------------------
+<!-- Selected Press (About)  {data-icon=newspaper} -->
+<!-- -------------------------------------------------------------------------------- -->
 
-```{r}
-print_section(position_data, 'about_me_press')
-```
+<!-- ```{r} -->
+<!-- print_section(position_data, 'about_me_press') -->
+<!-- ``` -->
 
 
 
-Selected Press (By)  {data-icon=newspaper}
---------------------------------------------------------------------------------
+<!-- Selected Press (By)  {data-icon=newspaper} -->
+<!-- -------------------------------------------------------------------------------- -->
 
-```{r}
-print_section(position_data, 'by_me_press')
-```
+<!-- ```{r} -->
+<!-- print_section(position_data, 'by_me_press') -->
+<!-- ``` -->
 
 
 
