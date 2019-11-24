@@ -109,7 +109,8 @@ Disclaimer {#disclaimer}
 
 <!-- Made with the R package [**pagedown**](https://github.com/rstudio/pagedown). -->
 
-This CV's source code is available at [github.com/francisko-rezende/cv](https://github.com/francisko-rezende/cv), it was derived from  [github.com/nstrayer/cv](https://github.com/nstrayer/cv).
+This CV was made with the R package [**pagedown**](https://github.com/rstudio/pagedown), its source code is available at [github.com/francisko-rezende/cv](https://github.com/francisko-rezende/cv). 
+It was derived from  [github.com/nstrayer/cv](https://github.com/nstrayer/cv).
 
 I wrote it following [Nick Strayer's tutorial](https://livefreeordichotomize.com/2019/09/04/building_a_data_driven_cv_with_r/#want-to-build-your-cv-this-way).
 
@@ -145,12 +146,20 @@ print_section(position_data, 'education')
 Research Experience {data-icon=laptop}
 --------------------------------------------------------------------------------
 
-::: aside
-Being part of diverse research groups was a privilege. Cooperation is invaluable when it comes to  doingquality high science. 
-:::
 
 ```{r}
 print_section(position_data, 'research_positions')
+```
+
+Teaching Experience {data-icon=chalkboard-teacher}
+--------------------------------------------------------------------------------
+
+::: aside
+I love being involved in education. I believe that teaching brings a whole new level of understanding to who teaches and empowers the students. 
+:::
+
+```{r}
+print_section(position_data, 'teaching_positions')
 ```
 
 
@@ -166,25 +175,51 @@ The presenter's name is _italicized_ for posters and talks
 print_section(position_data, 'academic_articles')
 ```
 
+Participation in scientific events {data-icon=calendar-check}
+--------------------------------------------------------------------------------
+
+```{r, results = 'asis'}
+position_data %>% print_section('event_participation')
+```
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
 Coding {data-icon=code}
 --------------------------------------------------------------------------------
+
 
 ```{r, results = 'asis'}
 position_data %>% print_section('coding')
 ```
 
-Teaching Experience {data-icon=chalkboard-teacher}
+
+
+Specialization courses {data-icon=chalkboard}
 --------------------------------------------------------------------------------
 
-::: aside
-I love being involved in education. I believe that teaching brings a whole new level of understanding to who teaches and empowers the students. 
-:::
-
-```{r}
-print_section(position_data, 'teaching_positions')
+```{r, results = 'asis'}
+position_data %>% print_section('specialization_courses')
 ```
 
-Organizing comittee {data-icon=bezier-curve}
+Selected online courses {data-icon=globe}
+--------------------------------------------------------------------------------
+::: aside
+At the moment I've complete 45 courses at Dacatamp. My [profile](https://www.datacamp.com/profile/franciskorezende) on their website has a list with all the courses I've taken.
+:::
+
+```{r, results = 'asis'}
+position_data %>% print_section('online_courses')
+```
+
+Organizing committee participation{data-icon=bezier-curve}
 --------------------------------------------------------------------------------
 ::: aside
 “Mostra de Trabalhos de Ecologia Básica” events were mini symposia in which Basic Ecology students were supposed to present the results of the small research projects that they conducted during the semester
@@ -195,24 +230,6 @@ Organizing comittee {data-icon=bezier-curve}
 ```{r, results = 'asis'}
 position_data %>% print_section('organizing_committee')
 ```
-<br>
-
-Participation in scientific events {data-icon=calendar-check}
---------------------------------------------------------------------------------
-
-```{r, results = 'asis'}
-position_data %>% print_section('event_participation')
-```
-
-
-Specialization courses {data-icon=chalkboard}
---------------------------------------------------------------------------------
-
-```{r, results = 'asis'}
-position_data %>% print_section('specialization_courses')
-```
-
-
 
 <!-- Selected Writings {data-icon=chart-line} -->
 <!-- -------------------------------------------------------------------------------- -->
@@ -253,7 +270,7 @@ if(PDF_EXPORT){
 Links {data-icon=link}
 --------------------------------------------------------------------------------
 
-<br>
+
 
 
 ")
@@ -264,4 +281,8 @@ Links {data-icon=link}
 }
 ```
 
+
+```{r, include=FALSE}
+pagedown::chrome_print("index.html")
+```
 
