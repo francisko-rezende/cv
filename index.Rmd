@@ -185,11 +185,11 @@ position_data %>% print_section('event_participation')
 <br>
 <br>
 <br>
-<br>
-<br>
-<br>
-<br>
-<br>
+<!-- <br> -->
+<!-- <br> -->
+<!-- <br> -->
+<!-- <br> -->
+<!-- <br> -->
 
 
 Coding {data-icon=code}
