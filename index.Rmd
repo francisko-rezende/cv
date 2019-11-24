@@ -48,14 +48,14 @@ Aside
 ================================================================================
 
 
-<!-- ![logo](beta_dist.png){width=100%} -->
+<!-- ![logo](avatar.jpg){width=100%} -->
 
 ```{r}
 # When in export mode the little dots are unaligned, so fix that. 
 if(PDF_EXPORT){
   cat("View this CV online with links at _francisko-rezende.github.io/cv/_")
 } else {
-  cat("[<i class='fas fa-download'></i> Download a PDF of this CV](https://github.com/francisko-rezende/cv/raw/master/de_moraes_rezende-cv.pdf)")
+  cat("[<i class='fas fa-download'></i> Download a PDF of this CV](https://github.com/francisko-rezende/cv/raw/master/index.pdf)")
 }
 ```
 
@@ -78,7 +78,7 @@ Coding Skills {#coding_skills}
 coding_skills <- tribble(
   ~skill,               ~level,
   "R",                  4,
-  "Latex",              2,
+  "LaTeX",              2,
   "Python",             1,
   "Bash",               1
 )
@@ -107,7 +107,7 @@ build_skill_bars(language_skills)
 Disclaimer {#disclaimer}
 --------------------------------------------------------------------------------
 
-Made with the R package [**pagedown**](https://github.com/rstudio/pagedown).
+<!-- Made with the R package [**pagedown**](https://github.com/rstudio/pagedown). -->
 
 This CV's source code is available at [github.com/francisko-rezende/cv](https://github.com/francisko-rezende/cv), it was derived from  [github.com/nstrayer/cv](https://github.com/nstrayer/cv).
 
@@ -146,7 +146,7 @@ Research Experience {data-icon=laptop}
 --------------------------------------------------------------------------------
 
 ::: aside
-Being part of diverse research groups was a privilege. Cooperation is invaluable when it comes to scientific production. 
+Being part of diverse research groups was a privilege. Cooperation is invaluable when it comes to  doingquality high science. 
 :::
 
 ```{r}
@@ -166,7 +166,7 @@ The presenter's name is _italicized_ for posters and talks
 print_section(position_data, 'academic_articles')
 ```
 
-Coding {data-icon=terminal}
+Coding {data-icon=code}
 --------------------------------------------------------------------------------
 
 ```{r, results = 'asis'}
@@ -195,6 +195,7 @@ Organizing comittee {data-icon=bezier-curve}
 ```{r, results = 'asis'}
 position_data %>% print_section('organizing_committee')
 ```
+<br>
 
 Participation in scientific events {data-icon=calendar-check}
 --------------------------------------------------------------------------------
@@ -213,13 +214,13 @@ position_data %>% print_section('specialization_courses')
 
 
 
-Selected Writings {data-icon=chart-line}
---------------------------------------------------------------------------------
+<!-- Selected Writings {data-icon=chart-line} -->
+<!-- -------------------------------------------------------------------------------- -->
 
 
-::: aside
-I have [personal website](https://francisko-rezende.netlify.com/)  with a few posts where you can see some of my personal projects.
-:::
+<!-- ::: aside -->
+<!-- I have [personal website](https://francisko-rezende.netlify.com/)  with a few posts where you can see some of my personal projects. -->
+<!-- ::: -->
 
 <!-- ```{r} -->
 <!-- print_section(position_data, 'data_science_writings') -->
