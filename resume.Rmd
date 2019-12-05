@@ -1,6 +1,6 @@
 ---
-title: Nick Strayer's Resume"
-author: Nick Strayer
+title: Francisko's Resume"
+author: Francisko de Moraes Rezende
 date: "`r Sys.Date()`"
 output:
   pagedown::html_resume:
@@ -47,66 +47,93 @@ Aside
 ================================================================================
 
 
-![logo](beta_dist.png){width=100%}
+<!-- ![logo](beta_dist.png){width=100%} -->
 
 Contact {#contact}
 --------------------------------------------------------------------------------
 
 
 
-- <i class="fa fa-envelope"></i> nick.strayer@gmail.com
-- <i class="fa fa-twitter"></i> NicholasStrayer
-- <i class="fa fa-github"></i> github.com/nstrayer
-- <i class="fa fa-link"></i> [nickstrayer.me](http://nickstrayer.me/)
-- <i class="fa fa-phone"></i> (734) 645-0110
+- <i class="fa fa-envelope"></i> francisko.rezende@gmail.com
+- <i class="fa fa-twitter"></i> francisko_r
+- <i class="fa fa-github"></i> github.com/francisko-rezende
+- <i class="fa fa-link"></i> [francisko-rezende.netlify.com](https://francisko-rezende.netlify.com/)
+<!-- - <i class="fa fa-phone"></i> +358 44 925 1325 -->
 
 
 
-Language Skills {#skills}
+Coding Skills {#coding_skills}
 --------------------------------------------------------------------------------
 
-
 ```{r}
-skills <- tribble(
+coding_skills <- tribble(
   ~skill,               ~level,
-  "R",                  5,
-  "Javascript (d3.js)", 4.5,
-  "Python",             4,
-  "Bash",               3.5,
-  "SQL",                3,
-  "C++",                3,
-  "AWK",                3
+  "R",                  4,
+  "LaTeX",              2,
+  "Python",             1,
+  "Bash",               1
 )
-build_skill_bars(skills)
+
+build_skill_bars(coding_skills)
 ```
 
 
-
-Open Source Contributions {#open-source}
+Language Skills {#language_skills}
 --------------------------------------------------------------------------------
 
-All projects available at `github.com/nstrayer/<name>`
+```{r}
+language_skills <- tribble(
+  ~skill,               ~level,
+  "Portuguese",                  5,
+  "English",             4,
+  "Spanish",               2,
+  "Finnish",              2
+)
 
+build_skill_bars(language_skills)
+```
 
-- `shinysense`: R package to use sensor data in Shiny apps
-- `tuftesque`: Hugo theme (behind LiveFreeOrDichotomize.com)
-- `slid3r`: D3 add-on for fully svg slider inputs
-
-
-More info {#more-info}
---------------------------------------------------------------------------------
-
-See full CV at nickstrayer.me/cv for more complete list of positions and publications.
 
 
 Disclaimer {#disclaimer}
 --------------------------------------------------------------------------------
 
-Made w/ [**pagedown**](https://github.com/rstudio/pagedown). 
+<!-- Made with the R package [**pagedown**](https://github.com/rstudio/pagedown). -->
 
-Source code: [github.com/nstrayer/cv](https://github.com/nstrayer/cv).
+This CV was made with the R package [**pagedown**](https://github.com/rstudio/pagedown), its source code is available at [github.com/francisko-rezende/cv](https://github.com/francisko-rezende/cv). 
+It was derived from  [github.com/nstrayer/cv](https://github.com/nstrayer/cv).
+
+I wrote it following [Nick Strayer's tutorial](https://livefreeordichotomize.com/2019/09/04/building_a_data_driven_cv_with_r/#want-to-build-your-cv-this-way).
 
 Last updated on `r Sys.Date()`.
+
+
+
+<!-- Open Source Contributions {#open-source} -->
+<!-- -------------------------------------------------------------------------------- -->
+
+<!-- All projects available at `github.com/nstrayer/<name>` -->
+
+
+<!-- - `shinysense`: R package to use sensor data in Shiny apps -->
+<!-- - `tuftesque`: Hugo theme (behind LiveFreeOrDichotomize.com) -->
+<!-- - `slid3r`: D3 add-on for fully svg slider inputs -->
+
+
+More info {#more-info}
+--------------------------------------------------------------------------------
+
+See full CV at [francisko-rezende.github.io/cv](https://francisko-rezende.github.io/cv/) for more complete list of positions and publications.
+
+
+<!-- Disclaimer {#disclaimer} -->
+<!-- -------------------------------------------------------------------------------- -->
+
+<!-- Made w/ [**pagedown**](https://github.com/rstudio/pagedown).  -->
+
+<!-- Source code: [github.com/francisko-rezende/cv](https://github.com/francisko-rezende/cv). -->
+
+<!-- Last updated on `r Sys.Date()`. -->
 
 
 
@@ -114,15 +141,18 @@ Last updated on `r Sys.Date()`.
 Main
 ================================================================================
 
-Nick Strayer {#title}
+Francisko _de Moraes Rezende_ {#title}
 --------------------------------------------------------------------------------
 
 ```{r}
-intro_text <- "I have made [visualizations viewed by hundreds of thousands of people](https://www.nytimes.com/interactive/2016/08/26/us/college-student-migration.html), [sped up query times for 25 terabytes of data by an average of 4,800 times](https://livefreeordichotomize.com/2019/06/04/using_awk_and_r_to_parse_25tb/), and built [packages for R](https://github.com/nstrayer/shinysense) that let you [do magic](http://nickstrayer.me/dataDayTexas/).
+# intro_text <- "I have made [visualizations viewed by hundreds of thousands of people](https://www.nytimes.com/interactive/2016/08/26/us/college-student-migration.html), [sped up query times for 25 terabytes of data by an average of 4,800 times](https://livefreeordichotomize.com/2019/06/04/using_awk_and_r_to_parse_25tb/), and built [packages for R](https://github.com/nstrayer/shinysense) that let you [do magic](http://nickstrayer.me/dataDayTexas/).
+# 
+# Currently searching for a data science position that allows me to build tools using visualization and machine learning to help people explore and understand their data. 
+# "
 
-Currently searching for a data science position that allows me to build tools using visualization and machine learning to help people explore and understand their data. 
-"
+intro_text <- "I have written the code for analysing all the data from all the projects I conducted during my academic trajectory, including making plots, tables, the first draft of my master's thesis, and a manuscript.
 
+I also attended several coding and statistics courses in person and remotely."
 
 cat(sanitize_links(intro_text))
 ```
@@ -138,19 +168,57 @@ position_data %>% print_section('education')
 
 
 
-Selected Positions {data-icon=suitcase}
+Selected Research Positions {data-icon=laptop}
 --------------------------------------------------------------------------------
 
 ```{r}
 position_data %>% print_section('positions')
 ```
 
-Selected Writing {data-icon=newspaper}
+<!-- <br> -->
+<!-- <br> -->
+<!-- <br> -->
+<!-- <br> -->
+<!-- <br> -->
+<!-- <br> -->
+<!-- <br> -->
+<!-- <br> -->
+
+
+Coding {data-icon=code}
 --------------------------------------------------------------------------------
 
 
-```{r}
-position_data %>% print_section('writings')
+```{r, results = 'asis'}
+position_data %>% print_section('coding')
 ```
+
+
+
+Specialization courses {data-icon=chalkboard}
+--------------------------------------------------------------------------------
+
+```{r, results = 'asis'}
+position_data %>% print_section('specialization_courses')
+```
+
+Selected online courses {data-icon=globe}
+--------------------------------------------------------------------------------
+::: aside
+At the moment I've complete 45 courses at Dacatamp. My [profile](https://www.datacamp.com/profile/franciskorezende) on their website has a list with all the courses I've taken.
+:::
+
+```{r, results = 'asis'}
+position_data %>% print_section('online_courses')
+```
+
+
+<!-- Selected Writing {data-icon=newspaper} -->
+<!-- -------------------------------------------------------------------------------- -->
+
+
+<!-- ```{r} -->
+<!-- position_data %>% print_section('writings') -->
+<!-- ``` -->
 
 
