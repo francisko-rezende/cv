@@ -1,5 +1,5 @@
 ---
-title: Francisko's Resume"
+title: Francisko's Resume
 author: Francisko de Moraes Rezende
 date: "`r Sys.Date()`"
 output:
@@ -195,7 +195,7 @@ position_data %>% print_section('coding')
 
 
 
-Specialization courses {data-icon=chalkboard}
+Selected specialization courses {data-icon=chalkboard}
 --------------------------------------------------------------------------------
 
 ```{r, results = 'asis'}
